@@ -1,0 +1,418 @@
+@charset "UTF-8";
+
+		/* host q&a 답변 CSS  */
+		#hostAnswerPage{
+		margin-top:90px;
+		width:1000px;
+		height:1100px;
+		margin:0 auto;
+		}
+
+		#hostAnswerForm{
+		height:900px;
+		width:1000px;
+		margin:0 auto;
+		}
+
+		#hostAnswerTable input{
+		font-size:15px;
+		border: solid 1px var;
+		background-color: #E6E6E6;
+		border-radius:5px;
+		width: 220px;
+		height: 50px;
+		border:0;
+		border-bottom-width:1;
+		}	
+
+		/* host 상품등록 CSS */
+		#productWrite{
+		width:1300px;
+		height:1300px;
+		}
+		
+		#sale_table text{
+		font-size:30px;
+		}
+
+		#sale_table{
+		margin-top:50px;
+		border-spacing:30px;
+		margin-left:140px;
+		text-align:center;
+		}
+		
+		#sale_tableHost{
+		margin-top:50px;
+		margin-left:140px;
+		text-align:center;
+		}
+		
+		#sale_tableHost tr{
+		font-size:20px;
+		}
+		
+		/* 검색어지정 */
+		#search{
+        margin:0 auto;
+        font-size:20px;
+        padding:20px;
+        width:1848;
+        height:60px;
+        background-image:url("/kosmopj_1/images/shoes1231.jpg");
+        }
+        
+		#sale_tableHost input{
+		font-size:15px;
+		border: solid 1px var;
+		background-color: #E6E6E6;
+		border-radius:5px;
+		width: 250px;
+		height: 50px;
+		border:0;
+		border-bottom-width:1;
+		}
+		
+		/* 주문목록 페이지 스타일 지정 */
+		#orderManage input{
+		font-size:15px;
+		border: solid 1px var;
+		background-color: #E6E6E6;
+		border-radius:5px;
+		width: 220px;
+		height: 80px;
+		border:0;
+		border-bottom-width:1;
+		}
+
+		#orderManage {
+		margin-top:30px;
+		margin-left:100px;
+		}
+		
+		/* 고객 구매목록 스타일 지정 */
+		#order{
+		margin:50px auto;
+		width:1400px;
+		height:1200px;
+		}
+		
+		#orderList{
+		height:850px;
+		width:1400px;
+		margin:70px 200px auto;
+		}
+		
+		#orderList th{
+		border:1;
+		border-bottom:3px solid #58FAF4;
+		}
+		
+		#orderList{
+		height:70px;
+		width:1000px;
+		margin-left:50px;
+		margin-top:60px;
+		}
+		
+		/* 고객 환불목록 스타일 지정 */
+		#refundList{
+		height:850px;
+		width:1400px;
+		margin:70px 200px auto;
+		}
+		
+		#refundList th{
+		border:1;
+		border-bottom:3px solid #58FAF4;
+		font-size:25px;
+		}
+		
+		#refundList{
+		height:70px;
+		width:1000px;
+		margin-left:200px;
+		margin-top:100px;
+		}
+		
+		#refund {
+		height:1200px;
+		width:1500px;
+		margin:0 auto;
+		}
+		
+		/* 회원가입 스타일 지정 */
+		#signinbox {
+		height:800;
+		float:left;
+		margin-left:80px;
+		}
+		
+		#signinbox input {
+		font-size:15px;
+		border: solid 1px var;
+		background-color: #E6E6E6;
+		border-radius:5px;
+		width: 220px;
+		height: 50px;
+		border:0;
+		border-bottom-width:1;
+		}	
+		
+		#genderbox{
+		height:0;
+		}
+
+		/* Q&A 페이지 스타일 조정 */
+		#board{
+		float:left;
+		margin:0 auto;
+		margin:0 auto;
+		width:700px;
+		}
+		
+		#board table tr{
+		border-bottom:1;
+		}
+		
+		#board ul{
+		font-weight:bold;
+		padding:30px;
+		margin-right:20px;
+		}
+		
+		#board ul li{
+		margin-right:15px;
+		font-size:15px;
+		text-align:left;
+		}
+		
+		#board fieldset{
+		border:0;
+		margin-left:200px;
+		padding:30px;
+		margin-top:20px;
+		border-radius:20px;
+		}
+		
+		#qphoto {
+		margin-top:0;
+		margin-left:400px;
+		}
+		
+		/* 로그인 스타일 지정 */
+		#loginbox{
+		margin:0 auto;
+		padding:80px;
+		background-repeat: no-repeat;
+		}
+		
+		#loginbg{
+		padding:80px;
+		}
+		
+		#loginbox input {
+		  margin-top:20px;
+		  border: solid 1px var;
+		  border-radius:10px;
+		  width: 440px;
+		  height :60px;
+		  font-size:20px;
+		  }	 
+	
+		#mainproduct li{
+		margin:70px;
+		}
+
+		/* 공통 스타일 지정 */
+		 #mainletter{
+		 margin-left:50px;
+		 }
+		 
+		 #product li{
+		 margin:70px;
+		 }
+
+		/* 검색어지정 */
+		#search{
+        margin:0 auto;
+        font-size:20px;
+        padding:20px;
+        width:1800;
+        height:60px;
+        background-image: url("images/shoes1231.jpg");
+        }
+        
+        #search input{
+        border-radius:10px;
+        font-size:20px;
+        height:40px;
+        }
+      
+        /* product 페이지 조정  */
+        #product {
+        display:inline-blcok;
+        }
+        
+        #product ul li{
+        list-style:none;
+        }
+        
+		#menu{
+    	 padding:5px;
+         margin-top:0;
+         width:1850; 
+         height:60px;
+         background-color:#00FFFF;
+         margin: 0 auto;
+         border-radius:5px;
+         text-decoration:none;
+          vertical-align:middle;
+    	} 
+    	
+    	#nav ul li{
+    	font-weight:bold;
+    	width:320px; 
+        height:40px;
+        line-height:40px;
+        text-align:center;
+        list-style:none;
+    	}
+    	
+    	#menu ul li{
+    	display:inline;
+    	width:300px; 
+        height:15px;
+        line-height:20px;
+        vertical-align:middle;
+        text-align:center;
+        list-style:none;
+        font-weight:bold;
+     	text-decoration:none;
+     	margin-top:-18px;
+     	margin-left:20px;
+    	}
+    
+    	#con{
+    	overflow:hidden;
+    	}
+       
+		#index{
+		padding:700px;
+		}
+			
+		#con ul li{
+		list-style:none;
+		display:inline-block;
+		}
+		
+        #header {
+        width:100%; 
+        height:300px;
+        line-height:100px;
+        background-repeat:no-repeat; 
+        background-size:cover;
+        }
+        
+        
+		#mainphoto img{
+		   width:100%;
+		   height:400px;
+		   margin: 0 auto;
+		}
+
+        #nav {
+         padding:10px;
+         margin-top:0;
+         width:100%; 
+         height:60px;
+         background-color:#a7f687;
+         margin: 0 auto;
+         border-radius:5px;
+        }
+
+        #content {
+         width:100%;
+         height:100%;
+         float:left;
+        }
+        	
+		/* 관리자 페이지 조정 */	
+		#host{
+		display:block;
+		padding-top:40px;
+		margin:0 auto;
+		width:1000px;
+		height:1300px;
+		}
+	
+		#host input {
+		height:70px;
+		width: 300px;
+		background-color: #2ECCFA;
+		border-radius:5px;
+		}
+		
+		#board input {
+		height:40px;
+		width: 200px;
+		background-color: #2ECCFA;
+		}
+		
+		#mainletter{
+		font-size:70px;
+		font-weight:bold;
+		color:#00BFFF;
+		}
+		/* host 회원관리 스타일 지정 */
+		#host_client{
+		margin-top:60px;
+		
+		}
+		
+		#host_manage{
+		width:1600px;
+		height:800px;
+		margin:0 auto;
+		
+		}
+		
+		#client_tbl{
+		border:1;
+		margin:0 auto;
+		border-spacing:30px;
+		}
+		
+		#client_tbl tr{
+		border-spacing:40px;
+		border-collapse:collapse;
+		line-height:35px;
+		}
+		
+		#client_tbl td{
+		border-bottom:3px solid #58FAF4;
+		padding: 0 0 2px 0;
+		}
+		
+		
+		/* 판매상품 등록 스타일 지정  */
+		#cart table input{
+		font-size:20px;
+		width:300px;
+		height:70px;
+		}
+		
+		
+		
+		/* footer스타일 지정 */
+	 	#footer {
+	 	position:relative;
+	 	margin-top:50px;
+    	bottom:0;
+    	height:100px;   
+    	background:#ccc;
+    	width:1890px;
+       }
+	
+	
+	

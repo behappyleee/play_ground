@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring.kosmopj.persistence.HostDAO">
+
+	<insert id="inventory_add" parameterType="com.spring.kosmopj.VO.ProductVO" >
+		INSERT INTO product_tbl (sale_productCode , product_name , product_price , product_count ,  product_size,
+			product_description, image_url)
+		VALUES (#{sale_productCode} , #{product_name}, #{product_price}, #{product_count}, #{product_size}, #{product_description} ,#{image_url})
+	</insert>
+
+	
+
+
+
+</mapper>  
+  

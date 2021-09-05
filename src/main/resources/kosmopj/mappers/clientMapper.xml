@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring.kosmopj.persistence.ClientDAO">
+  
+  	<select id="loginCheck" parameterType="java.util.Map" resultType="int">
+  		SELECT count(*) FROM member_tbl WHERE id = #{strId} AND password = #{strPwd}
+  	</select>
+  	
+  	<insert id="signinAction" parameterType="com.spring.kosmopj.VO.ClientVO">
+  		INSERT INTO member_tbl (id , password ,  name , address , hp , email , birth , gender) 
+  		VALUES (#{id} , #{password} , #{name} , #{address} , #{hp} , #{email} , #{birth} , #{gender})
+  	</insert>
+  	
+  	<select id="confirmId" parameterType="String" resultType="int">
+  		SELECT COUNT(*) FROM member_tbl WHERE id = #{id}
+  	</select>
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+ </mapper>

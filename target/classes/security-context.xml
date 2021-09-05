@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security 
+		https://www.springframework.org/schema/security/spring-security-5.2.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<security:http auto-config="true" use-expressions="true" create-session="never">
+			<!-- 관리자 영역 설정  -->
+			<security:intercept-url pattern="/**.ho" access="hasRole('ROLE_HOST')"  />
+			
+			<!-- 권한에 관계없이 접속 가능한 영역 (guest도 접속 가능) => permitAll 개념 -->
+			<security:intercept-url pattern="/**" access="permitAll"   />
+			
+			<!-- 로그인한 사용자 영역 -->
+			<security:intercept-url pattern="/**.lo" access="hasAnyRole('ROLE_HOST', 'ROLE_USER')"  />
+		
+	 <!-- 로그인 폼 -->
+	 <security:form-login login-page="/client/login"
+					login-processing-url ="/client/loginCheck"
+					authentication-success-handler-ref = "userLoginSuccessHandler"
+					authentication-failure-handler-ref = "userLoginFailureHandler"
+					username-parameter ="userid" password-parameter ="password" />
+	<security:logout logout-url="/logout"
+		logout-success-url="/" /> 
+		
+		<!-- 접근 권한이 없는 경우의 코드 -->
+		<security:access-denied-handler ref="userDeniedHandler" />	
+	</security:http>
+	
+	<!-- 방법2. DB방식 컨넥션 풀 정보를 읽어온다 -->
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<!-- dataSource.xml 의 <bean id="dataSource"> 같아야 한다  -->
+			<security:jdbc-user-service data-source-ref="dataSource" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<!-- 시큐리티 추가2. @Secured 어노테이션 활성화, 사용권한 제한  -->	
+	<!-- Namespaces 탭에서 security 추가 , 오른쪽 5.2 선택 -->
+	<security:global-method-security secured-annotations="enabled" />
+	
+		<bean id="userLoginSuccessHandler" class="com.spring.play.service.UserLoginSuccessHandler" />
+		
+		<bean id="userLoginFailureHandler" class="com.spring.play.service.UserLoginFailureHandler" />
+		
+		<bean id="userDeniedHandler"       class="com.spring.play.service.UserDeniedHandler" />
+	
+	<!-- 로그인 인증을 처리하는 빈  주의사항: UserAuthenticationService (생성자 있어야 함 sqlSession을 매개변수로 가지는)-->
+	<bean id="userService" class="com.spring.play.service.UserAuthenticationService" >
+		<constructor-arg name="sqlSession" ref="sqlSession" />
+	</bean>
+	
+	<!-- 비밀번호 암호화 빈  -->
+	<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+
+
+</beans>
