@@ -4,13 +4,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="com.spring.kosmopj.persistence.ClientDAO">
+  <mapper namespace="com.spring.play.persistence.ClientDAO">
   
   	<select id="loginCheck" parameterType="java.util.Map" resultType="int">
   		SELECT count(*) FROM member_tbl WHERE id = #{strId} AND password = #{strPwd}
   	</select>
   	
-  	<insert id="signinAction" parameterType="com.spring.kosmopj.VO.ClientVO">
+  	<insert id="signinAction" parameterType="com.spring.play.VO.ClientVO">
   		INSERT INTO member_tbl (id , password ,  name , address , hp , email , birth , gender) 
   		VALUES (#{id} , #{password} , #{name} , #{address} , #{hp} , #{email} , #{birth} , #{gender})
   	</insert>

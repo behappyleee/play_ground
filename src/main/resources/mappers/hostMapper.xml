@@ -4,9 +4,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.spring.kosmopj.persistence.HostDAO">
+<mapper namespace="com.spring.play.persistence.HostDAO">
 
-	<insert id="inventory_add" parameterType="com.spring.kosmopj.VO.ProductVO" >
+	<insert id="inventory_add" parameterType="com.spring.play.VO.ProductVO" >
 		INSERT INTO product_tbl (sale_productCode , product_name , product_price , product_count ,  product_size,
 			product_description, image_url)
 		VALUES (#{sale_productCode} , #{product_name}, #{product_price}, #{product_count}, #{product_size}, #{product_description} ,#{image_url})
